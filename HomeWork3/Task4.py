@@ -8,20 +8,12 @@
 # 3 -> 11
 # 2 -> 10
 
-l = []
-
-
-def convert(b):
-    if (b == 0):
-        return l
-    dig = b % 2
-    l.append(dig)
-    convert(b // 2)
-
-
-a = int(input("Введите число: "))
-convert(a)
-l.reverse()
-print("Двоичная форма числа:")
-for i in l:
-    print(i)
+n = int(input('Введитечисло которое хотите перевести в двоичное: '))
+ 
+b = ''
+ 
+while n > 0:
+    b = str(n % 2) + b
+    n = n // 2
+ 
+print(b)
