@@ -4,17 +4,16 @@
 # N = 30 -> [2, 3, 5]
 
 
-n = int(input('Введите число N: '))
 def list_prime_number(n):
     numbers = []
     d = 2
-    while d * d <= n:
+    while n>1:
         if n % d == 0:
             numbers.append(d)
-            n //= d
+            while n%d==0:
+                n/=d
         else:
             d += 1
-    if n > 1:
-        numbers.append(n)
     return numbers
-print(list_prime_number(n))
+x = list_prime_number(int(input('Введите число: ')))
+print(x)
