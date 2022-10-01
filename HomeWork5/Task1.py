@@ -9,4 +9,3 @@ with open("text_copy.txt", encoding='utf_8') as file:
                 words.remove(word)
         sentence = " ".join(words)
         print(sentence)
-        
